@@ -1,0 +1,133 @@
+% \addcontentsline{toc}{prettypart}{СПИСОК ТЕРМИНОВ И СОКРАЩЕНИЙ}
+\prettypart{ТЕРМИНЫ И ОПРЕДЕЛЕНИЯ}
+
+% \newcolumntype{s}{>{\hsize=.25\hsize \raggedright\arraybackslash}X} \newcolumntype{b}{>{\hsize=.75\hsize}X}
+
+% \begin{tabularx}{\textwidth}{|sb|} { 
+%      >{\raggedright\arraybackslash}X 
+%      >{\raggedright\arraybackslash}X 
+%      >{\raggedright\arraybackslash}X  
+%   }
+
+%  API & --- & это набор определений и протоколов для создания и интеграции прикладного программного обеспечения. Иногда это называют контрактом между поставщиком информации и пользователем информации, устанавливающим контент, требуемый от потребителя (запрос), и контент, требуемый производителем (ответ). Например, дизайн API для службы погоды может указывать, что пользователь предоставляет почтовый индекс, а производитель отвечает протоколом, состоящим из двух частей, первая из которых соответствует высокой температуре, а вторая - низкой \\
+%  item 21  & item 22  & item 23  \\
+% \end{tabularx}
+
+
+% \noindent
+% \begin{tabular}{
+%   p{\dimexpr.2\linewidth-2\tabcolsep-1.3333\arrayrulewidth}% column 1
+%   p{\dimexpr.1\linewidth-2\tabcolsep-1.3333\arrayrulewidth}% column 2
+%   p{\dimexpr.25\linewidth-2\tabcolsep-1.3333\arrayrulewidth}% column 3
+%   }
+%   \raggedright TERM& --- & asdgasgasgasfgadfgafadf \\
+% \end{tabular}
+
+
+
+
+
+\RaggedRight \noindent \justify \sloppy API
+\begin{minipage}[t][][t]{3.15cm}
+\RaggedLeft
+  ---
+\end{minipage}
+\begin{minipage}[t][][t]{0.75\textwidth}
+\RaggedRight  \justify \sloppy
+ это набор определений и протоколов для создания и интеграции прикладного программного обеспечения. Иногда это называют контрактом между поставщиком информации и пользователем информации, устанавливающим контент, требуемый от потребителя (запрос), и контент, требуемый производителем (ответ). Например, дизайн API для службы погоды может указывать, что пользователь предоставляет почтовый индекс, а производитель отвечает протоколом, состоящим из двух частей, первая из которых соответствует высокой температуре, а вторая - низкой \\
+\end{minipage}
+
+
+
+\RaggedRight \noindent \justify \sloppy Back"=End
+\begin{minipage}[t][][t]{1.9cm}
+\RaggedLeft
+  ---
+\end{minipage}
+\begin{minipage}[t][][t]{0.75\textwidth}
+\RaggedRight  \justify \sloppy
+ это серверная часть, та часть приложения, которая скрыта от пользователя. Эта часть отвечает за обработку данных, их хранение и математические операции \\
+\end{minipage}
+
+
+% \begin{minipage}{4cm}
+\RaggedRight \noindent \justify \sloppy DAM"=система
+% \end{minipage}%
+\begin{minipage}[t][][t]{1cm}
+\RaggedLeft
+  ---
+% 123.456.7890
+\end{minipage}%
+\begin{minipage}[t][][t]{0.75\textwidth}
+\RaggedRight  \justify \sloppy
+ это программный продукт, предназначенный для управления информацией, используемой в бизнес"=целях. Сортировка, поиск необходимых файлов и структуризация для быстрого и удобного хранения данных, а также менеджмент прав на использование всей этой информацией сотрудниками компании. (DAM"= сокращение от Digital Asset Management) \\
+\end{minipage}
+
+
+
+\RaggedRight \noindent \justify \sloppy Endpoint
+\begin{minipage}[t][][t]{1.9cm}
+\RaggedLeft
+  ---
+\end{minipage}
+\begin{minipage}[t][][t]{0.75\textwidth}
+\RaggedRight  \justify \sloppy
+это одна из рубежных точек канала связи. Когда две системы связываются друг с другом через API, точки взаимодействия и называются endpoints. Для API конечная точка может включать URL-адрес сервера или службы. Каждая конечная точка - это место, из которого API-интерфейсы могут получить доступ к ресурсам, необходимым для выполнения своей функции \\
+\end{minipage}
+
+
+
+\RaggedRight \noindent \justify \sloppy Front"=End
+\begin{minipage}[t][][t]{1.7cm}
+\RaggedLeft
+  ---
+\end{minipage}
+\begin{minipage}[t][][t]{0.75\textwidth}
+\RaggedRight  \justify \sloppy
+это то, что пользователь видит и с чем взаимодействует (пользовательский интерфейс) \\
+\end{minipage}
+
+
+
+\RaggedRight \noindent GSI и LSI
+\begin{minipage}[t][][t]{1.7cm}
+\RaggedLeft
+  ---
+\end{minipage}
+\begin{minipage}[t][][t]{0.75\textwidth}
+\RaggedRight  \justify \sloppy
+это вторичные индексы базы данных AWS DynamoDB. GSI (Global Secondary Index) позволяет выполнять запросы по всей таблице и по всем разделам, меняя основной ключ по которому будет производиться агрегация данных. LSI (Local Secondary Index) позволяет выполнять запросы по одной секции, указанной значением Sort Key в запросе, LSI может быть применен только для изменения вторичного ключа, по которому производиться отбор и сортировка данных, основной ключ поиска (Primary Key) будет совпадать с Primary ключом таблицы \\
+\end{minipage}
+
+
+
+\RaggedRight \noindent \justify \sloppy Query parameters
+\begin{minipage}[t][][t]{0.4cm}
+\RaggedLeft
+  ---
+\end{minipage}
+\begin{minipage}[t][][t]{0.75\textwidth}
+\RaggedRight  \justify \sloppy
+это параметры запроса, определенный набор параметров, прикрепленный к концу строки URL-адреса. Они являются расширениями URL-адреса, которые используются для определения содержимого или действий на основе передаваемых данных. Чтобы указать параметры запроса в конец URL-адреса добавляется знак «?», за которым следует query параметр \\
+\end{minipage}
+
+
+
+\RaggedRight \noindent \justify \sloppy RESTfull API
+\begin{minipage}[t][][t]{1.3cm}
+\RaggedLeft
+  ---
+\end{minipage}
+\begin{minipage}[t][][t]{0.75\textwidth}
+\RaggedRight  \justify \sloppy
+REST API (также известный как RESTful API) - это интерфейс прикладного программирования (API или веб-API), который соответствует ограничениям архитектурного стиля REST и позволяет взаимодействовать с веб-службами RESTful. REST означает передачу репрезентативного состояния и был создан компьютерным ученым Роем Филдингом \\
+\end{minipage}
+\RaggedRight \noindent \justify \sloppy Smart-папка
+\begin{minipage}[t][][t]{1.4cm}
+\RaggedLeft
+  ---
+\end{minipage}
+\begin{minipage}[t][][t]{0.75\textwidth}
+\RaggedRight  \justify \sloppy
+это способ группировки файлов из разных мест в одну папку, по определенным критериям или вручную. При этом при размещении одного файла в несколько таких папок не создаются копии, а лишь добавляются указатели на этот файл в список каждой отдельной smart-папки. Отображение содержимого осуществляется с помощью обработки запроса к базе данных. В данной работе термин "кластер" имеет то же значение
+\end{minipage}

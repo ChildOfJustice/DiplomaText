@@ -1,0 +1,215 @@
+\documentclass[a4paper,14pt]{extreport} %размер бумаги устанавливаем А4, шрифт 14пунктов
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{amssymb,amsfonts,amsmath,enumerate,float} % подключаем нужные пакеты расширений
+\usepackage{graphicx} % хотим вставлять в диплом рисунки
+\usepackage{longtable} % для таблиц длиннее, чем на страницу
+\usepackage{misccorr} % Добавляем "точки" после названий разделов
+\usepackage{geometry} % Меняем поля страницы
+\usepackage{indentfirst}%отступ первого абзаца после названия главы
+\usepackage{setspace}
+\usepackage{fancyhdr} 
+\usepackage{lastpage}
+\usepackage{titlesec} % название главы по центру
+\usepackage[nottoc,notlof,notlot]{tocbibind} 
+\usepackage[figure,table]{totalcount}
+\usepackage{caption}
+\captionsetup[figure]{font=small}
+\usepackage{etoolbox}
+
+\usepackage{listings} % code snippets
+\usepackage{lmodern}  % for bold teletype font
+\usepackage{amsmath}  % for \hookrightarrow
+\usepackage{xcolor}   % for \textcolor
+\usepackage{listings}
+\lstset{
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+%   frame=single,
+  breaklines=true,
+%   postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+}
+% MY LITERATURE REPORT:
+\usepackage{csquotes}% Recommended
+\bibliographystyle{bibliography/gost-numeric.bbx}
+\usepackage[
+    parentracker=true,
+    backend=biber,
+    hyperref=false,
+    bibencoding=utf8,
+    style=gost-numeric,
+    language=auto,
+    autolang=other,
+    citestyle=gost-numeric,
+    defernumbers=true,
+    bibstyle=gost-numeric,
+    sorting=none,
+]{biblatex}
+\addbibresource{bibliography/library.bib}
+\usepackage{textcomp}
+% ^
+
+% fixing biblatex-gost formatting:
+\renewcommand{\mkgostheading}{\textrm} % сделать авторов в списке литературы по госту
+% ^
+
+\graphicspath{{images/}}
+
+
+
+\makeatletter
+% \renewcommand{\@biblabel}[1]{#1.} % Заменяем библиографию с квадратных скобок на точку
+\makeatother
+
+\geometry{left=2.5cm}% левое поле
+\geometry{right=2cm}% правое поле
+\geometry{top=2cm}% верхнее поле
+\geometry{bottom=2cm}% нижнее поле
+
+\setcounter{secnumdepth}{4}% уровень вложенности счётчиков
+
+\onehalfspacing
+
+
+
+\usepackage{titletoc} %
+
+\titleclass{\prettypart}{top}[\part]
+
+
+\titleformat{\prettypart}
+{\normalfont\centering}{}{0pt}{\normalfont}
+
+
+\titleformat{\part}
+{\normalfont\bfseries\centering}{}{0pt}{\normalfont\bfseries}
+
+
+
+\titleformat{\chapter}
+{\normalfont\bfseries}{\thechapter}{1em}{}
+
+\titleformat{\section}
+{\normalfont\bfseries}{\thesection}{1em}{}
+
+\titleformat{\subsection}[block]
+{\normalfont\bfseries}{\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}[block]
+{\normalfont\bfseries}{\thesubsubsection}{1em}{}
+
+
+
+
+% Настройка вертикальных и горизонтальных отступов
+\titlespacing*{\prettypart}{0pt}{*4}{*4}
+\titlespacing*{\chapter}{0.75cm}{*4}{*4}
+\titlespacing*{\section}{\parindent}{*4}{*4}
+\titlespacing*{\subsection}{\parindent}{*4}{*4}
+
+\newcounter{prettypart}
+\titlecontents{prettypart}{\vspace{1em}\normalfont}{}{}{\titlerule*[1pc]{.}\normalfont\contentspage}
+
+\titlecontents{part}{\vspace{1em}\normalfont\bfseries}{}{}{\titlerule*[1pc]{.}\normalfont\contentspage}
+
+% to make a "1." before all the chapters, comment this:
+% \titlecontents{chapter}{\vspace{1em}\normalfont\bfseries}this!!!->>> {}{}{\titlerule*[1pc]{.}\normalfont\bfseries\contentspage}
+% выравнивание всех chapter чтобы был отступ по горизонтали в содержании
+\titlecontents{chapter}{
+    \hspace*{1em}
+    \normalfont
+    \bfseries
+}{\bfseries \contentslabel{-.1em} \hspace*{1em} }{}{
+    \titlerule*[1pc]{.}
+    \normalfont
+    \bfseries
+    \contentspage
+}
+\titlecontents{section}{
+    \hspace*{2em}
+}{ \contentslabel{} \hspace*{1em} }{}{
+    \titlerule*[1pc]{.}
+    \contentspage
+}
+
+
+
+% нумерация снизу по середине
+\pagestyle{fancy} 
+\lhead{} \chead{} \rhead{}
+\lfoot{} \cfoot{\normalsize\thepage} \rfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancypagestyle{plain}{%
+    % \fancyhf{} % clear all header and footer fields
+    % \fancyhead[RE,CC]{\normalsize \thepage} % Even page, Odd page; Right, Left, Center
+    % тоже снизу по середине:
+    % \cfoot{\thepage}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0pt}
+}
+
+\makeatletter
+\makeatother 
+
+\usepackage[figurename=Рисунок]{caption}
+\usepackage[labelsep=space]{caption}
+% \counterwithout{figure}{section}
+\counterwithout{figure}{subsection}
+
+\usepackage{ragged2e} % for /justify command
+
+\setcounter{tocdepth}{3}
+
+
+\setlength{\parindent}{1cm}
+
+\newcommand{\quotes}[1]{``#1''}
+
+
+% to use bold commands (for bold text and etc)
+% \renewcommand{\rmdefault}{cmr} % Шрифт с засечками
+\renewcommand{\rmdefault}{Tempora-TLF} %tempora font (almost like Times New Roman)
+% \renewcommand{\sfdefault}{cmss} % Шрифт без засечек
+\renewcommand{\ttdefault}{cmtt} % Моноширинный шрифт
+
+\begin{document}
+
+% \input{parts/titlepage.tex}% это титульный лист
+
+\setcounter{page}{2}
+\input{referat.tex}
+
+\renewcommand{\contentsname}{\centering \normalfont СОДЕРЖАНИЕ \par} 
+% {\renewcommand{\baselinestretch}{1.0}
+% \tableofcontents
+       
+% }
+\tableofcontents
+\pagebreak
+
+\input{definitions.tex}
+\input{parts/introduction.tex}
+
+\part*{\normalfontОСНОВНАЯ ЧАСТЬ}
+\input{parts/part1_literatureReport}
+\input{parts/part2_technologies}
+\input{parts/part3_practical}
+\input{parts/part4_realBusiness}
+
+\input{parts/conclusion}
+
+\newpage
+% \medskip
+
+%Sets the bibliography style to UNSRT and imports the 
+%bibliography file "samples.bib".
+% \bibliographystyle{unsrt}
+% \bibliography{Lib}
+\printbibliography[title={\begin{center}\normalfont{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}\end{center}}]
+
+
+\end{document} 
+
+
